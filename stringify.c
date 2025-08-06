@@ -32,3 +32,11 @@ void to_string_u16b(uint16_t value, char* dst, size_t len) {
     }
     dst[MIN(len - 1, 16)] = '\0';
 }
+
+void to_string_u8b(uint8_t value, char* dst, size_t len) {
+    uint32_t mask = 1 << 7;
+    for (size_t i = 0; (i < len - 1) and (i < 8); i++) {
+        dst[i] = ((value & (mask >> i)) == 0) ? '0' : '1';
+    }
+    dst[MIN(len - 1, 8)] = '\0';
+}

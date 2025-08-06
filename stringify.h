@@ -10,5 +10,6 @@ void to_string_f(float value, char* dst, size_t len);
 
 void to_string_u32b(uint32_t value, char* dst, size_t len);
 void to_string_u16b(uint16_t value, char* dst, size_t len);
+void to_string_u8b(uint8_t value, char* dst, size_t len);
 
 #endif
